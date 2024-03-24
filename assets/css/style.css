@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Fira Mono";
-  src: url("/assets/fonts/Fira_Mono/FiraMono-Regular.ttf");
-  src: url("/assets/fonts/Fira_Mono/FiraMono-Regular.ttf?#iefix") format("embedded-opentype"), url("/assets/fonts/Fira_Mono/FiraMono-Regular.ttf") format("woff"), url("/assets/fonts/Fira_Mono/FiraMono-Regular.ttf") format("truetype");
+  src: url("../fonts/Fira_Mono/FiraMono-Regular.ttf");
+  src: url("../fonts/Fira_Mono/FiraMono-Regular.ttf?#iefix") format("embedded-opentype"), url("../fonts/Fira_Mono/FiraMono-Regular.ttf") format("woff"), url("../fonts/Fira_Mono/FiraMono-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Fira Mono";
-  src: url("/assets/fonts/Fira_Mono/FiraMono-Medium.ttf");
-  src: url("/assets/fonts/Fira_Mono/FiraMono-Medium.ttf?#iefix") format("embedded-opentype"), url("/assets/fonts/Fira_Mono/FiraMono-Medium.ttf") format("woff"), url("/assets/fonts/Fira_Mono/FiraMono-Medium.ttf") format("truetype");
+  src: url("../fonts/Fira_Mono/FiraMono-Medium.ttf");
+  src: url("../fonts/Fira_Mono/FiraMono-Medium.ttf?#iefix") format("embedded-opentype"), url("../fonts/Fira_Mono/FiraMono-Medium.ttf") format("woff"), url("../fonts/Fira_Mono/FiraMono-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Fira Mono";
-  src: url("/assets/fonts/Fira_Mono/FiraMono-Bold.ttf");
-  src: url("/assets/fonts/Fira_Mono/FiraMono-Bold.ttf?#iefix") format("embedded-opentype"), url("/assets/fonts/Fira_Mono/FiraMono-Bold.ttf") format("woff"), url("/assets/fonts/Fira_Mono/FiraMono-Bold.ttf") format("truetype");
+  src: url("../fonts/Fira_Mono/FiraMono-Bold.ttf");
+  src: url("../fonts/Fira_Mono/FiraMono-Bold.ttf?#iefix") format("embedded-opentype"), url("../fonts/Fira_Mono/FiraMono-Bold.ttf") format("woff"), url("../fonts/Fira_Mono/FiraMono-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
@@ -49,10 +49,10 @@ html {
   display: block;
 }
 .icon-menu {
-  background-image: url("/assets/img/icon/ic-menu.svg");
+  background-image: url("../img/icon/ic-menu.svg");
 }
 .icon-send {
-  background-image: url("/assets/img/icon/ic-send.svg");
+  background-image: url("../img/icon/ic-send.svg");
 }
 
 .btn {
@@ -168,7 +168,7 @@ html {
 }
 #main .container #figure li + li:before {
   content: "";
-  background-image: url("/assets/img/icon/ic-arrow-down.svg");
+  background-image: url("../img/icon/ic-arrow-down.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
