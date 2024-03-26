@@ -7,50 +7,13 @@
     <title>Collatz conjecture</title>
 </head>
 <body>
-    <header id="header">
+    <main id="start">
         <div class="container">
-            <button class="btn btn-menu">
-                <i class="icon icon-menu"></i>
-            </button>
-            <div class="logo">
-                <a href="#">Collatz conjecture</a>
+            <div class="img">
+                <img src="./assets/img/logo.png" alt="">
             </div>
+            <a href="home.html" class="btn btn-start">Бастау</a>
         </div>
-    </header>
-    <aside id="aside">
-        <div class="container">
-
-        </div>
-    </aside>
-    <main id="main">
-        <div class="tabs">
-            <div class="container">
-                <button class="btn tablinks active" onclick="showType(event, 'numbers')">Сандар</button>
-                <button class="btn tablinks" onclick="showType(event, 'figure')">Қадам</button>
-                <button class="btn tablinks" onclick="showType(event, 'graph')">Графика</button>
-            </div>
-        </div>
-        <div class="container">
-            <div id="peak-block">
-                <p class="peak" id="peak"></p>
-                <p>Ең жоғары сан</p>
-            </div>
-            <ul id="numbers" class="tabcontent"></ul>
-            <ul id="figure" class="tabcontent"></ul>
-            <canvas id="graph" class="tabcontent" style="display: none;"></canvas>
-        </div>
-        <form id="form" class="form form-calc">
-            <div class="container">
-                <div class="form-input">
-                    <input type="number" name="" id="number" placeholder="Санды енгізіңіз...">
-                    <button type="button" id="btn-send" class="btn btn-send" onclick="calc()" disabled>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.63097 2.12208C2.73747 1.67558 1.74847 2.52808 2.05797 3.47758L4.06497 9.63008C4.12174 9.80389 4.22507 9.95882 4.36374 10.078C4.50241 10.1972 4.6711 10.2761 4.85147 10.3061L12.7815 11.6276C13.199 11.6976 13.199 12.2976 12.7815 12.3676L4.85197 13.6891C4.6716 13.7191 4.50291 13.798 4.36424 13.9172C4.22557 14.0363 4.12224 14.1913 4.06547 14.3651L2.05797 20.5211C1.74797 21.4711 2.73747 22.3236 3.63097 21.8771L21.378 13.0061C22.2075 12.5911 22.2075 11.4076 21.378 10.9931L3.63097 2.12208Z" fill="#007AFF"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </form>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
