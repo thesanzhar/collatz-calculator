@@ -15,13 +15,26 @@ textInput.addEventListener('keydown', function(e) {
     }
 });
 
+function arithmeticMean(numbers) {
+    if (numbers.length === 0) {
+        return 0; 
+    }
+    
+    var sum = numbers.reduce(function(acc, val) {
+        return acc + val;
+    }, 0);
+    
+    return sum / numbers.length;
+}
+
 function calc() {
     let textNumber = document.getElementById("number").value;
     let output = document.getElementById('numbers')
     let figure = document.getElementById('figure')
-    let graph = document.getElementById('graph')
-    let peak = document.getElementById('peak')
-    let peakClass = document.getElementById('peak-block')
+    let max = document.getElementById('max')
+    let avg = document.getElementById('avg')
+    let iteration = document.getElementById('iteration')
+    let tabs = document.getElementById('tabs')
     let number = parseInt(textNumber);
     let i = 0;
     let maxNumber = 0
@@ -31,6 +44,7 @@ function calc() {
     const yValues = [];
     xValues.length = 0;
     yValues.length = 0;
+    let nums = [];
 
     while (number != 1){
         i++
@@ -46,10 +60,13 @@ function calc() {
 
         xValues.push(i)
         yValues.push(number)
+        nums.push(number)
     }
     
-    peak.innerHTML = maxNumber
-    peakClass.classList.add('active')
+    var mean = arithmeticMean(nums);
+    avg.innerHTML = mean
+    max.innerHTML = maxNumber
+    iteration.innerHTML = i
     
     new Chart("graph", {
     type: "line",
@@ -58,8 +75,8 @@ function calc() {
         datasets: [{
             fill: false,
             lineTension: 0,
-            backgroundColor: "rgba(0,0,255,1.0)",
-            borderColor: "rgba(0,0,255,0.1)",
+            backgroundColor: "rgba(220,53,69,1.0)",
+            borderColor: "rgba(220,53,69,0.1)",
             data: yValues
         }]
     },
@@ -71,7 +88,7 @@ function calc() {
     }
     });
 
-    
+    tabs.style.display = 'block'
 }
 
 function showType(e, typeName) {

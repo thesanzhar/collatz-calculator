@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Collatz conjecture</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <button class="btn btn-menu">
+                <i class="icon icon-menu"></i>
+            </button>
+            <div class="logo">
+                <a href="index.html">Collatz conjecture</a>
+            </div>
+            <a href="index.html" class="btn">Басты бет</a>
+        </div>
+    </header>
+    <main id="main">
+        <div class="tabs" id="tabs">
+            <div class="container">
+                <button class="btn tablinks active" onclick="showType(event, '-number')">Сандар</button>
+                <button class="btn tablinks" onclick="showType(event, '-step')">Қадам</button>
+                <button class="btn tablinks" onclick="showType(event, '-stat')">Статистика</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="tabcontent -number" id="-number">
+                <ul id="numbers"></ul>
+            </div>
+            <div class="tabcontent -step" id="-step">
+                <ul id="figure"></ul>
+            </div>
+            <div class="tabcontent -stat" id="-stat">
+                <div class="cards">
+                    <div class="item -green">
+                        <p class="stat-title" id="max"></p>
+                        <span>Ең жоғары сан</span>
+                    </div>
+                    <div class="item -yellow">
+                        <p class="stat-title" id="avg"></p>
+                        <span>Орташа көрсеткіші</span>
+                    </div>
+                    <div class="item -red">
+                        <p class="stat-title" id="iteration"></p>
+                        <span>Итерация саны</span>
+                    </div>
+                </div>
+                <canvas id="graph"></canvas>
+            </div>
+        </div>
+        <form id="form" class="form form-calc">
+            <div class="container">
+                <div class="form-input">
+                    <input type="number" name="" id="number" placeholder="Санды енгізіңіз...">
+                    <button type="button" id="btn-send" class="btn btn-send" onclick="calc()" disabled>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.63097 2.12208C2.73747 1.67558 1.74847 2.52808 2.05797 3.47758L4.06497 9.63008C4.12174 9.80389 4.22507 9.95882 4.36374 10.078C4.50241 10.1972 4.6711 10.2761 4.85147 10.3061L12.7815 11.6276C13.199 11.6976 13.199 12.2976 12.7815 12.3676L4.85197 13.6891C4.6716 13.7191 4.50291 13.798 4.36424 13.9172C4.22557 14.0363 4.12224 14.1913 4.06547 14.3651L2.05797 20.5211C1.74797 21.4711 2.73747 22.3236 3.63097 21.8771L21.378 13.0061C22.2075 12.5911 22.2075 11.4076 21.378 10.9931L3.63097 2.12208Z" fill="var(--purple)"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
